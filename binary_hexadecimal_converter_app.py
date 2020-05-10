@@ -14,6 +14,7 @@ print("\nDecimal values from " + str(start) + " to " + str(stop) + ":")
 for i in range(start - 1, stop):
 	print(decimal[i])
 
+# use bin() and hex()
 binary = []
 hexadecimal = []
 for i in decimal:
