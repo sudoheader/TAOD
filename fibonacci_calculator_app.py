@@ -6,6 +6,7 @@
 print("Welcome to the Fibonacci Calculator App\n")
 digits = int(input("How many digits of the Fibonacci Sequence would you like to compute: "))
 
+# start at [1, 1] so that golden ratio won't divide by 0
 seq = [1, 1]
 for i in range(digits - 2):
 	fib = seq[i] + seq[i + 1]
