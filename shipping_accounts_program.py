@@ -26,6 +26,7 @@ large = 4.95
 larger = 4.80
 
 # logic for calculating cost could be better
+# tldr reason :-P
 if ship < 100:
 	per = small
 	cost = per * ship
