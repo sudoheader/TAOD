@@ -4,7 +4,6 @@ print("Welcome to the Factor Generator App\n")
 
 flag = True
 
-
 while flag:
 	num = int(input("Enter a number to determine all factors of that number: "))
 	factors = []
