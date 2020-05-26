@@ -4,30 +4,38 @@ print("Welcome to the Even Odd Number Sorter App\n")
 
 running = True
 
-numbers = input("Enter in a string of numbers separated by a comma (,) : ").replace(" ", "")
-num_list = numbers.split(",")
-print(num_list)
+while running:
+	numbers = input("Enter in a string of numbers separated by a comma (,) : ").replace(" ", "")
+	num_list = numbers.split(",")
 
-evens = []
-odds = []
+	evens = []
+	odds = []
 
-print("---- Result Summary ----")
+	print("\n---- Result Summary ----")
 
-for i in range(len(num_list)):
-	if num_list[i] % 2 == 0:
-		evens.append(i)
-		print("\t" + str(num_list[i]) + " is even!")
-	else:
-		odds.append(i)
-		print("\t" + str(num_list[i]) + " is odd!")
+	# test if number is even or odd
+	for i in range(len(num_list)):
+		i = int(i)
+		if i % 2 == 0:
+			evens.append(i)
+			print("\t" + str(i) + " is even!")
+		else:
+			odds.append(i)
+			print("\t" + str(i) + " is odd!")
 
-evens.sort()
-odds.sort()
-print("The following " + str(evens.count()) + " numbers are even:")
-for i in evens:
-	print("\t" + evens[i])
-# for i in lstEven:
+	# sort lists
+	evens.sort()
+	odds.sort()
+	print("\nThe following " + str(len(evens)) + " numbers are even:")
+	for i in evens:
+		print("\t" + str(i))
 
-print("The following " + str(odds.count()) + " numbers are odd:")
-for i in odds:
-	print("\t" + odds[i])
+	print("\nThe following " + str(len(odds)) + " numbers are odd:")
+	for i in odds:
+		print("\t" + str(i))
+
+	# stop loop if choice is 'y'
+	choice = input("\nWould you like to run the program again (y/n): ").lower()
+	if choice != 'y':
+		running = False
+		print("Thank you for using the program. Goodbye.")
