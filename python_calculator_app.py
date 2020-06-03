@@ -54,7 +54,7 @@ while running:
 	elif operator == 'exponentiation' or operator == 'e':
 		result = exponent(num1, num2)
 	else:
-		print("That is not a valid operation.  Try again.")
+		print("That is not a valid operation. Try again.")
 		result = "OPP ERROR"
 
 	history.append(result)
@@ -64,5 +64,5 @@ while running:
 		print("\nCalculation Summary: ")
 		for calc in history:
 			print(calc)
-		print("\nThank you for using the Python Calculator App.  Goodbye.")
+		print("\nThank you for using the Python Calculator App. Goodbye.")
 		running = False
